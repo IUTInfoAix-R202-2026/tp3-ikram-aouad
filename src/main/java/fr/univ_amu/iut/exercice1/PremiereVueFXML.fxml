@@ -16,7 +16,7 @@
     - <center>      : un Label explicatif (texte libre), wrapText="true", aligné
                       au centre.
     - <bottom>      : un Button "D'accord, c'est magique", aligné au centre.
-
+  
   Aucun fx:controller n'est nécessaire (vue purement statique, pas de logique).
 
   Référez-vous à la section "Cheat-sheet FXML" du README pour la syntaxe XML
@@ -24,7 +24,34 @@
   attributs précis de chaque composant.
 -->
 
+
 <BorderPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
-            prefWidth="420.0" prefHeight="240.0">
+  prefWidth="420.0" prefHeight="240.0">
+  <padding>
+    <Insets top="20" right="20" bottom="20" left="20" />
+  </padding>
+  <top>
+    <Label
+      text="Bienvenue dans le monde FXML !"
+      style="-fx-font-weight: bold;"
+      BorderPane.alignment="CENTER"
+    />
+  </top>
+
+  <center>
+    <Label text="Texte explicatif long qui se wrappe et est centré."
+      wrapText="true"
+      alignment="CENTER"
+      BorderPane.alignment="CENTER"
+    />
+  </center>
+
+  <bottom>
+    <Button
+      text="D'accord, c'est magique"
+      alignment="CENTER"
+      BorderPane.alignment="CENTER"
+    />
+  </bottom>
 
 </BorderPane>
